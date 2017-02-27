@@ -1,11 +1,30 @@
 body {
   margin-top:60px;
-  font-family: Sans Serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
+}
+
+#background {
+  background-color: #FF7F00;
 }
 
 .center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Overwrite Bootstraps img-responsive class */
+.img-responsive {
+  display: block;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+blockquote {
+  border: none;
+}
+
+blockquote-footer {
+  color: black;
 }
