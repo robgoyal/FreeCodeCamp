@@ -1,0 +1,86 @@
+body {
+	padding-top: 50px;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+	background-color: grey;
+	margin-bottom: 600px;
+}
+
+.education {
+	margin-bottom:600px;
+	text-align:center;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+#name {
+	text-align:center;
+	font-size:4em;
+}
+
+.name {
+	position: relative;
+	background: no-repeat url("images/name.jpg");
+	border-bottom: 2px solid #000;
+}
+
+.name > img {
+	vertical-align: top;
+	width: 100%;
+	opacity: 0;
+}
+
+.name > div {
+	position:absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.name h1 {
+	padding-top: 200px;
+	text-align: center;
+	font-size: 5em;
+}
+
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+.btn-primary {
+    color: #fff;
+    background-color: #0495c9;
+    border-color: #357ebd; /*set the color you want here*/
+    border-radius:15px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #000;
+    background-color: #00b3db;
+    border-color: #285e8e; /*set the color you want here*/
+}
+
+#scroll-button {
+	margin-top: 100px;
+}
