@@ -1,0 +1,33 @@
+body {
+    background-color: grey
+}
+
+#content {
+    padding: 10px;
+}
+
+#main {
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#page-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#quote {
+    text-align: center;
+}
+
+#btn-random-quote {
+    float: right;
+    margin-right: 10px;
+}
+
+#btn-twitter {
+
+}
