@@ -46,9 +46,7 @@ blockquote {
     margin-left: 20px;
 }
 
-/*
- * Buttons
-*/
+/* Buttons */
 #btn-random-quote {
     float: right;
     margin-right: 27px;
@@ -66,6 +64,7 @@ blockquote {
     height: 70px;
 }
 
+/* Reduce margins for small screens */
 @media only screen and (max-width: 470px) {
     #twitter-share-button {
         margin-left: 0px;
