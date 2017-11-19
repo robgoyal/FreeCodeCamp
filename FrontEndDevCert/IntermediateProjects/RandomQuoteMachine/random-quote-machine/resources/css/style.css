@@ -38,8 +38,8 @@ body {
     margin-top: 5px;
 }
 
-#btn-twitter {
-
+#twitter-share-button:hover {
+    color: blue;
 }
 
 #author {
