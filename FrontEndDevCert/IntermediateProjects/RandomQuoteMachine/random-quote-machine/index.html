@@ -16,12 +16,11 @@
 
     <!-- Personal CSS -->
     <link href="resources/css/style.css" rel="stylesheet">
-
   </head>
 
   <body>
 
-    <div class="container-fluid">
+    <div class="container">
       <div id="page-title">
         <h1> Random Quote Machine </h1>
       </div>
@@ -30,24 +29,24 @@
         <div id="content">
           <blockquote>
             <p id="quote">
-              <i class="fa fa-quote-left" aria-hidden="true"></i> 
-              I have never killed anyone, but I have read some obituary notices with great satisfaction. 
-              <i class="fa fa-quote-right" aria-hidden="true"></i> 
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+                <span></span>
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
 
-            <footer id="author">Clarence Darrow</footer>
+            <footer id="author"></footer>
           </blockquote>
         </div>
 
         <div id="buttons">
 
           <!-- Twitter button -->
-          <a id="btn-twitter" class="btn btn-twitter" href='#' title="Tweet this quote!">
+          <a id="btn-twitter" class="btn btn-twitter" title="Tweet this quote!">
             <span class="fa fa-twitter fa-2x"></span>
           </a>
 
           <!-- New Quote button -->
-          <a id="btn-random-quote" class="btn btn-default" href='#' role="button" title="Click for a new quote!">
+          <a id="btn-random-quote" class="btn btn-default" role="button" title="Click for a new quote!">
             Random Quote
           </a>
         </div>
@@ -56,6 +55,10 @@
 
     <!-- JQuery JS -->
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+
     <!-- Bootstrap JS -->
     <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Personal JS -->
+    <script src="resources/js/script.js"></script>
   </body>

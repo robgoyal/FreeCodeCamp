@@ -1,5 +1,5 @@
 body {
-    background-color: grey
+    background-color: grey;
 }
 
 #content {
@@ -19,6 +19,13 @@ body {
     text-align: center;
 }
 
+/* Increase width of doc for small screen devices */
+@media only screen and (max-width: 400px) {
+    #main, #page-title {
+        width: 100%;
+    }
+}
+
 #quote {
     text-align: center;
 }
@@ -26,8 +33,19 @@ body {
 #btn-random-quote {
     float: right;
     margin-right: 10px;
+
+    /* Line up random quote button with twitter button */
+    margin-top: 5px;
 }
 
 #btn-twitter {
 
+}
+
+#author {
+    float: right;
+}
+
+#buttons {
+    margin-top: 15px;
 }
