@@ -13,12 +13,23 @@ $(document).ready(function() {
 
             // Perform request for JSON weather data
             $.getJSON(url, function(data) {
-                console.log(data);
+
+                // Retrieve weather information from returned data
+                let country_code = data['sys']['country'];
+                let region_name = data['name'];
+                let temperature_celcius = data['main']['temp'];
+                let description = data['weather'][0]['description'];
+                let icon_src = data['weather'][0]['icon'];
+
+                $("#location").text(region_name + ', ' + country_code);
+                $("#temperature").text(temperature_celcius + " C");
+                $("#description").text(description);
+                $("#weather-icon").attr("src", icon_src);
             });
         });
     }
 
-    // Error message
+    // Browser does not support geolocation information
     else {
         console.log("Geolocation information not available!");
     }
