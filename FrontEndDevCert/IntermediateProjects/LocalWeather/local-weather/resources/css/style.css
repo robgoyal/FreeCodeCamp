@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+
+.center {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#scale {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+#scale:hover {
+    color: red;
+}
