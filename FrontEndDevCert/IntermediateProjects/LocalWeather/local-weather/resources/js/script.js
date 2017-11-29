@@ -22,14 +22,26 @@ $(document).ready(function() {
                 // Retrieve weather information from returned data
                 let country_code = data['sys']['country'];
                 let region_name = data['name'];
-                temperature = data['main']['temp'];
-                let description = data['weather'][0]['description'];
                 let icon_src = data['weather'][0]['icon'];
+                temperature = data['main']['temp'];
 
-                // Set information
+                let description = data['weather'][0]['description'];
+
+                // Convert first letter of each word to uppercase in description
+                description = description.split(' ').map(function(word) {
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }).join(' ');
+
+                // Delete loading text
+                $(".loading").remove();
+
+                // Set location and description content
                 $("#location").text(region_name + ', ' + country_code);
                 $("#description").text(description);
+
+                // Weather icon attributes
                 $("#weather-icon").attr("src", icon_src);
+                $("#weather-icon").attr("style", "width: 100px; height: 100px;");
 
                 // Create HTML for temperature and button for temperature scale
                 $("#temperature").html(Math.trunc(temperature) + '<button id="scale">\u00b0C</button>');
@@ -56,12 +68,9 @@ $(document).ready(function() {
         });
     }
 
-
-
     // Browser does not support geolocation information
     else {
         console.log("Geolocation information not available!");
     }
 
 });
-
