@@ -22,9 +22,11 @@
     <div style="margin-top: 50px;" class="container">
 
       <div class="input-group">
-        <input type="text" class="form-control">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button">Search</button>
+          <form id="query">
+            <input type="text" class="form-control" id="text">
+            <input class="btn btn-default" type="submit" value="Search" id="enter">
+          </form>
           <a class="btn btn-outline-secondary" href="https://en.wikipedia.org/wiki/Special:Random" role="button">Random</a>
         </div>
       </div>
