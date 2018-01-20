@@ -10,16 +10,13 @@
     <!-- Bootstrap CSS -->
     <link href="vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font-Awesome CSS
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
-
-    <!-- Personal CSS
-    <link href="resources/css/style.css" rel="stylesheet"> -->
+    <!-- Personal CSS -->
+    <link href="resources/css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
-    <div style="margin-top: 50px;" class="container">
+    <!-- <div style="margin-top: 50px;" class="container">
 
       <div class="input-group">
         <div class="input-group-append">
@@ -30,8 +27,20 @@
           <a class="btn btn-outline-secondary" href="https://en.wikipedia.org/wiki/Special:Random" role="button">Random</a>
         </div>
       </div>
-    </div>
+    </div> -->
+    <div class="container">
+      <form class="input-group" id="query">
+        <input type="text" class="form-control" id="text">
+        <div class="input-group-btn">
+          <input class="btn btn-default" type="submit" value="Search" id="enter">
+          <a class="btn btn-default" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" role="button">Random</a>
+        </div>
+      </form>
 
+      <div id="results">
+
+      </div>
+    </div>
     <!-- JQuery JS -->
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
 
