@@ -15,32 +15,20 @@
   </head>
 
   <body>
-
-    <!-- <div style="margin-top: 50px;" class="container">
-
-      <div class="input-group">
-        <div class="input-group-append">
-          <form id="query">
-            <input type="text" class="form-control" id="text">
-            <input class="btn btn-default" type="submit" value="Search" id="enter">
-          </form>
-          <a class="btn btn-outline-secondary" href="https://en.wikipedia.org/wiki/Special:Random" role="button">Random</a>
-        </div>
-      </div>
-    </div> -->
     <div class="container">
-      <form class="input-group" id="query">
-        <input type="text" class="form-control" id="text">
+
+      <!-- Form -->
+      <form class="input-group">
+        <input type="text" class="form-control" id="query" placeholder="Search Wikipedia" autocomplete="off">
         <div class="input-group-btn">
-          <input class="btn btn-default" type="submit" value="Search" id="enter">
+          <input class="btn btn-default" type="submit" value="Search" id="submit">
           <a class="btn btn-default" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" role="button">Random</a>
         </div>
       </form>
 
-      <div id="results">
-
-      </div>
     </div>
+
+
     <!-- JQuery JS -->
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
 

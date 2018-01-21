@@ -1,50 +1,58 @@
 /* Name: script.js
    Author: Robin Goyal
-   Last-Modified: January 19, 2018
+   Last-Modified: January 21, 2018
    Purpose: Client-side functionality for requesting Wikipedia
             articles through the API
 */
 
-$(document).ready(function() {
+$().ready(function() {
 
-  /*
-  NOTE: creating a link for each page can be done by
-  adding curid=pageid to https://en.wikipedia.org/
-  */
+  /* Send request to Wikipedia API from text query */
+  let sendRequest = function(event) {
+    // Don't submit form
+    event.preventDefault();
 
-  $('#text').keyup(function(event) {
-    if (event.keyCode === 13) {
-      $("#enter").submit();
-    }
-  })
-
-  document.getElementById('query').addEventListener('submit', function(evt) {
-    evt.preventDefault();
     $.ajax({
       url: "https://en.wikipedia.org/w/api.php",
       data: {
         action: 'query',
         list: 'search',
-        srsearch: evt.target[0].value,
+        srsearch: event.target[0].value,
         format: "json"
       },
       dataType: 'jsonp',
-      success: function(data) {
-
-        // Clear results div for each search
-        var div = document.createElement("results");
-        $("#results").html('');
-        data['query']['search'].forEach(function(result) {
-
-          // Create a new div for each result
-          result_div = "<a target='_blank' href = https://en.wikipedia.org/?curid=" + result['pageid'] + "><div>"
-          result_div = result_div + "<h4>" + result['title'] + "</h4>";
-          result_div = result_div + "<p>" + result['snippet'] + "</p></div></a>";
-
-          $("#results").append(result_div);
-        });
-      }
+      success: createResultDivs
     });
-  });
+  }
 
+  /* Dynamically create divs for each result */
+  let createResultDivs = function(data) {
+
+    // Prepare new div for search resutls
+    $("#results").remove();
+    $(".container").append("<div id='results'></div>");
+
+    // Create div for each result
+    data['query']['search'].forEach(function(result) {
+      let title = result['title'];
+      let snippet = result['snippet'];
+      let pageid = result['pageid'];
+
+      result_div = "<a target='_blank' href = https://en.wikipedia.org/?curid=" + pageid;
+      result_div = result_div + "><div><h4>" + title + "</h4><p>" + snippet + "</p></div></a>";
+
+      // Append result to results div
+      $("#results").append(result_div);
+    });
+  };
+
+  // Submit form if user hits enter
+  $('#query').keyup(function(event) {
+    if (event.keyCode === 13) {
+      $("#submit").submit();
+    }
+  })
+
+  // Create listener for form submit
+  $('form').first().submit(sendRequest);
 });
