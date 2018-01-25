@@ -1,6 +1,6 @@
 /* Name: script.js
    Author: Robin Goyal
-   Last-Modified: January 21, 2018
+   Last-Modified: January 24, 2018
    Purpose: Client-side functionality for requesting Wikipedia
             articles through the API
 */
@@ -28,6 +28,9 @@ $().ready(function() {
   /* Dynamically create divs for each result */
   let createResultDivs = function(data) {
 
+    $('container').css('margin-top', '15%');
+    $('.container').animate({'marginTop': '0%'});
+
     // Prepare new div for search resutls
     $("#results").remove();
     $(".container").append("<div id='results'></div>");
@@ -39,7 +42,7 @@ $().ready(function() {
       let pageid = result['pageid'];
 
       result_div = "<a target='_blank' href = https://en.wikipedia.org/?curid=" + pageid;
-      result_div = result_div + "><div><h4>" + title + "</h4><p>" + snippet + "</p></div></a>";
+      result_div = result_div + "><div id='result'><h4>" + title + "</h4><p>" + snippet + "</p></div></a>";
 
       // Append result to results div
       $("#results").append(result_div);
